@@ -31,13 +31,13 @@ Ideas:
 
 * Once you have this working, there are a number of things you can do to take advantage of it. For example, I have an alias that runs a query I use often (I just type "check_ptm" and the results are sent to me):
 
-        alias check_ptm="Rscript /app/data-science/current/people/eric/sql_query_and_send.R picking_time/check_ptm.sql eric@instacart.com"
+        alias check_ptm="Rscript /app/data-science/current/people/eric/sql_query_and_send.R picking_time/check_ptm.sql yourname@domain.com"
 
 * Alternatively, if someone needs information that can be generated in a query but is too data- or computationally-intensive for Blazer you could run it on the server and have the results emailed directly to the person (in a cronjob, perhaps, if they want it frequently)
 
 * Lastly, it can be a fast way to set up simple monitoring of something without going through creation of a report. For example I have the following in a cronjob to monitor the picking time model:
 
-        Rscript /app/data-science/current/people/eric/sql_query_and_send.R people/eric/sql/ptm_performance.sql eric@instacart.com
+        Rscript /app/data-science/current/people/eric/sql_query_and_send.R people/eric/sql/ptm_performance.sql yourname@domain
 <br>
 
 Note that it will not send you attachments over 100k rows or that violate gmails maximum attachment limits.
